@@ -1,8 +1,6 @@
-<?php
+<?php namespace app\traits;
 
-namespace app\traits;
-
-trait ProperyExtract {
+trait PropertyExtract {
 	/**
 	 * An object version of PHP's core extract() function
 	 * This version pulls out all the elements of hash and pushes them
@@ -18,7 +16,7 @@ trait ProperyExtract {
 	 */
 	protected function extract($properties, $modifiers = [], $ifExists = true)
 	{
-		foreach ((array) $properties as $key -> $value) {
+		foreach ((array) $properties as $key => $value) {
 			if (!empty($modifiers['key']) && is_callable($modifiers['key'])) {
 				$key = $modifiers['key']($key, $value);
 			}
