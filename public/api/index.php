@@ -1,6 +1,6 @@
 <?php
 require dirname(dirname(__DIR__)) . '/public/wp/wp-blog-header.php';
-header("Content-type: application/json");
+# header("Content-type: application/json");
 
 $api = new \Slim\Slim();
 
