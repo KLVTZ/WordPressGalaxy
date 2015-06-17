@@ -15,12 +15,12 @@ spl_autoload_register(function ($class)
 	$first = array_shift($segments);
 
 	if ($first === "WPPlugins") {
-		$path = dirname(__DIR__) . "/classes/" . "/" . implode("/", $segments) . ".php";
-
+		$path = dirname(__DIR__) . "/classes/" . implode("/", $segments) . ".php";
 	} else {
 		array_unshift($segments, $first);
 		$path = WP_PLUGINS_DIR	. "/" . implode("/", $segments) . ".php";
 	}
-	if (file_exists($path))
+	if (file_exists($path)) {
 		include $path;
+	}
 });
