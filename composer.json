@@ -16,8 +16,16 @@
 	],
     "require": {
 		"php": ">=5.4",
-		"johnpbloch/wordpress": "4.1.1",
-		"wpackagist-plugin/plugin-dependencies": "1.3"
+		"johnpbloch/wordpress": "4.2.2",
+		"wpackagist-plugin/plugin-dependencies": "1.3",
+        "twig/twig": "~1.18",
+        "slim/slim": "~2.6"
+	},
+
+	"autoload": {
+		"psr-4": {
+			"app\\": "app/"
+		}
 	},
 	"extra": {
 		"wordpress-install-dir": "public/wp",

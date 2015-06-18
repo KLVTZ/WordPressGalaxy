@@ -32,6 +32,5 @@ class RandomClass {
 add_action('plugins_loaded', function ()
 {
 	$object = new RandomClass(["type" => "Location"]);
-	$someObject = new \SomePlugin\SomeClass();
 });
 // add_action('init', [$object, "print_message"]);

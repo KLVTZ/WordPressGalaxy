@@ -15,7 +15,7 @@
  * @package WordPress
  */
 
-// Let's define our environment for better control
+/** Let's define our environment for better control **/
 define('APP_ROOT', dirname(__DIR__));
 define('APP_ENV', getenv('APP_ENV'));
 
@@ -25,6 +25,10 @@ if (file_exists(APP_ROOT . '/config/env/local.php')) {
 } else {
 	require APP_ROOT . '/config/env/' . APP_ENV . '.php';
 }
+
+/** Let's define our environment for better control **/
+require APP_ROOT . '/vendor/autoload.php';
+
 /**
  * WordPress Database Table prefix.
  *
@@ -40,7 +44,6 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
